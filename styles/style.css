@@ -175,6 +175,7 @@ address {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  text-wrap: nowrap;
 }
 
 .lots {
