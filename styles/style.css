@@ -62,7 +62,7 @@ address {
 
 .cover {
   height: 757px;
-  background: url(/images/cover.jpg);
+  background: url(./images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -135px 0;
