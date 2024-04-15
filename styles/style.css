@@ -18,17 +18,26 @@
   gap: 34.5px;
   margin-left: 22px;
   text-wrap: nowrap;
-}
-
-li {
   list-style: circle;
-  text-decoration: underline 1px;
   text-underline-offset: 5px;
 }
 
 li.active {
   list-style: none;
+}
+
+a.active {
   text-decoration: none;
+}
+
+li a:hover {
+  transition: 0.65s;
+  opacity: 0.5;
+}
+
+button:hover {
+  background-color: rgb(122, 70, 138);
+  transition: 0.65s;
 }
 
 .logo {
@@ -48,7 +57,7 @@ li.active {
   line-height: 24.3px;
 }
 
-address {
+.adress {
   font-style: normal;
   text-decoration: none;
   margin-bottom: 2px;
@@ -56,29 +65,26 @@ address {
 
 .telephone-number,
 .email {
+  font-style: normal;
   text-decoration: underline 1px;
   text-underline-offset: 4px;
 }
 
 .cover {
-  height: 757px;
+  min-height: 757px;
   background: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -135px 0;
+  background-position: center;
   margin-top: 3px;
 }
 
 .overlay {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-.cover__content {
-  display: flex;
-  flex-direction: column;
 }
 
 .cover__title {
@@ -87,13 +93,13 @@ address {
   z-index: 1;
   color: white;
   width: 1000px;
-  height: 355px;
+  min-height: 355px;
   margin: 165px 50px 0px 50px;
 }
 
 .aligned-text {
   width: auto;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 100px;
   font-weight: 700;
   line-height: 115px;
@@ -101,12 +107,8 @@ address {
   text-align: left;
 }
 
-.aligned-text .letter-spacing-extended {
-  letter-spacing: 0.6em;
-}
-
 .aligned-text_center {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 100px;
   font-weight: 700;
   line-height: 100px;
@@ -116,12 +118,8 @@ address {
   margin-bottom: 20px;
 }
 
-.aligned-text_center .letter-spacing-extended {
-  letter-spacing: 0.6em;
-}
-
 .aligned-text_right {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 100px;
   font-weight: 700;
   line-height: 100px;
@@ -129,11 +127,15 @@ address {
   text-align: right;
 }
 
+.letter-spacing-extended {
+  letter-spacing: 0.6em;
+}
+
 .aligned-text_right .letter-spacing-extended {
   letter-spacing: 0.3em;
 }
 
-.aligned-text_right .no-letter-spacing {
+.no-letter-spacing {
   letter-spacing: 0;
 }
 
@@ -146,7 +148,7 @@ address {
 }
 
 .cover__description-text {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
@@ -155,6 +157,7 @@ address {
   text-transform: uppercase;
   word-spacing: 18.521px;
   margin-right: 79px;
+  text-wrap: nowrap;
 }
 
 .cover__description-text .letter-spacing-extended {
@@ -162,12 +165,10 @@ address {
 }
 
 .bet-button {
-  width: 256px;
-  height: 51px;
   border: 1px solid white;
   padding: 12px 32px 11px 31px;
   text-transform: uppercase;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 25.83px;
@@ -185,7 +186,7 @@ address {
 }
 
 .lots__heading {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
@@ -200,12 +201,10 @@ address {
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   width: 100%;
-  height: 563px;
 }
 
 .lots__card-list-item {
   list-style: none;
-  text-decoration: none;
   text-underline-offset: 4px;
 }
 
@@ -219,15 +218,7 @@ address {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.card_type_film {
   width: 100%;
-  height: 100%;
-  background: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -105px 0;
 }
 
 .card .overlay {
@@ -239,7 +230,7 @@ address {
 
 .card__title {
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 26.4px;
@@ -251,32 +242,31 @@ address {
 
 .card__text {
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.card__text .letter-spacing-extended {
-  letter-spacing: 0.13em;
+.card_type_film {
+  background: url(../images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .card_type_book {
-  width: 100%;
-  height: 100%;
   background: url(../images/card-lot-02.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -105px 0;
+  background-position: center;
 }
 
 .card_type_picture {
-  width: 100%;
-  height: 100%;
   background: url(../images/card-lot-03.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -105px 0;
+  background-position: center;
 }
 
 .lots__look-more-link {
@@ -316,14 +306,13 @@ address {
 }
 
 .about__title {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
   text-align: left;
   text-transform: uppercase;
   width: auto;
-  height: 47px;
   margin-top: 138px;
   margin-left: 8px;
 }
@@ -332,48 +321,17 @@ address {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.001em;
+  width: 100%;
   text-align: left;
   grid-column-start: 2;
   margin-left: 8px;
-}
-
-.about__text .letter-spacing-extended-4em {
-  letter-spacing: 0.04em;
-}
-
-.about__text .letter-spacing-extended-1em {
-  letter-spacing: 0.01em;
-}
-
-.about__text .letter-spacing-extended-008em {
-  letter-spacing: 0.008em;
+  letter-spacing: 0.005em;
 }
 
 .about__text-with-paragraph {
   margin-bottom: 24px;
   margin-top: 10px;
-  margin-left: 8px;
   letter-spacing: 0.01em;
-}
-
-.about__text-with-paragraph .no-letter-spacing {
-  letter-spacing: 0em;
-}
-
-.about__text-with-paragraph .letter-spacing-extended {
-  letter-spacing: 0.02em;
-}
-
-.about__text-with-paragraph .letter-spacing-extended-1em {
-  letter-spacing: -0.01em;
-}
-
-.about__text-with-paragraph .letter-spacing-extended-3em {
-  letter-spacing: 0.03em;
-}
-.about__text-with-paragraph .letter-spacing-extended-002em {
-  letter-spacing: 0.002em;
 }
 
 .footer {
@@ -385,7 +343,6 @@ address {
 
 .contacts_footer {
   margin-left: 1px;
-  margin-top: 2px;
 }
 
 .contacts_footer .telephone-number,
@@ -398,6 +355,8 @@ address {
 .footer__adress {
   line-height: 24.3px;
   font-size: 18px;
+  font-style: normal;
+  text-decoration: none;
 }
 
 .footer__menu {
@@ -409,6 +368,7 @@ address {
   font-size: 18px;
   line-height: 21.13px;
   margin-top: 1px;
+  text-underline-offset: 4px;
 }
 
 .footer__menu-list li {
