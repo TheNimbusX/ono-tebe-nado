@@ -160,7 +160,6 @@
   text-wrap: nowrap;
 }
 
-
 .bet-button {
   border: 1px solid white;
   padding: 12px 32px 11px 31px;
@@ -257,7 +256,7 @@
 }
 
 .card_type_picture {
-  background-image: url(../images/card-lot-03.jpg); 
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .lots__look-more-link {
