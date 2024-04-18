@@ -356,15 +356,12 @@
 }
 
 .footer__menu-list {
+  display: block;
   text-align: center;
   font-size: 18px;
   line-height: 21.13px;
   margin-top: 1px;
   text-underline-offset: 4px;
-}
-
-.footer__menu-list {
-  display: block;
   list-style: none;
 }
 
@@ -380,9 +377,6 @@
   width: 100%;
   grid-column-start: 3;
   margin-top: 2px;
-}
-
-.footer__social-list {
   list-style: none;
 }
 
